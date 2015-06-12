@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteStatement;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.google.gson.annotations.SerializedName;
 import com.orm.dsl.Table;
 import com.orm.util.NamingHelper;
 import com.orm.util.ReflectionUtil;
@@ -26,7 +27,7 @@ import java.util.NoSuchElementException;
 import static com.orm.SugarContext.getSugarContext;
 
 public class SugarRecord {
-
+    @SerializedName("sugarRecordId")
     private Long id = null;
 
     public static <T> int deleteAll(Class<T> type) {
